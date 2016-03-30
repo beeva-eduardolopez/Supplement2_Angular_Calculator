@@ -4,12 +4,19 @@ angular.module('angularCalculatorApp', [])
         $scope.onClickSum = function() {
             $scope.result = calculateSum();
             function calculateSum() {
-                return $scope.op1 + $scope.op2;
+                if ($scope.op1 == '' || $scope.op1 == undefined ||
+                    $scope.op2 == '' || $scope.op2 == undefined) {
+                    alert('Both operands are required!')
+                } else {
+                    var o1 = $scope.op1;
+                    var o2 = $scope.op2;
+                    $scope.hidden = 'visible';
+                    $scope.operation = 'adding';
+                    $scope.ope1 = $scope.op1;
+                    $scope.ope2 = $scope.op2;
+                    return o1 + o2;
+                }
             }
-            $scope.operation = 'add';
-            $scope.hidden = 'visible';
-            $scope.ope1 = $scope.op1;
-            $scope.ope2 = $scope.op2;
             $scope.op1 = '';
             $scope.op2 = '';
 
@@ -17,38 +24,62 @@ angular.module('angularCalculatorApp', [])
         $scope.onClickSubtract = function() {
             $scope.result = calculateSub();
             function calculateSub() {
-                return $scope.op1 - $scope.op2;
+                if ($scope.op1 == '' || $scope.op1 == undefined ||
+                    $scope.op2 == '' || $scope.op2 == undefined) {
+                    alert('Both operands are required!')
+                } else {
+                    var o1 = $scope.op1;
+                    var o2 = $scope.op2;
+                    $scope.hidden = 'visible';
+                    $scope.operation = 'subtracting';
+                    $scope.ope1 = $scope.op1;
+                    $scope.ope2 = $scope.op2;
+                    return o1 - o2;
+                }
             }
-            $scope.operation = 'subtract';
-            $scope.hidden = 'visible';
-            $scope.ope1 = $scope.op1;
-            $scope.ope2 = $scope.op2;
             $scope.op1 = '';
             $scope.op2 = '';
+
         };
         $scope.onClickMultiply = function() {
             $scope.result = calculateMul();
             function calculateMul() {
-                return $scope.op1 * $scope.op2;
+                 if ($scope.op1 == '' || $scope.op1 == undefined ||
+                    $scope.op2 == '' || $scope.op2 == undefined) {
+                    alert('Both operands are required!')
+                } else {
+                    var o1 = $scope.op1;
+                    var o2 = $scope.op2;
+                    $scope.hidden = 'visible';
+                    $scope.operation = 'multiplying';
+                    $scope.ope1 = $scope.op1;
+                    $scope.ope2 = $scope.op2;
+                    return o1 * o2;
+                }
             }
-            $scope.operation = 'multiply';
-            $scope.hidden = 'visible';
-            $scope.ope1 = $scope.op1;
-            $scope.ope2 = $scope.op2;
             $scope.op1 = '';
             $scope.op2 = '';
+
         };
         $scope.onClickDivide = function() {
             $scope.result = calculateDiv();
             function calculateDiv() {
-                return $scope.op1 / $scope.op2;
+                if ($scope.op1 == '' || $scope.op1 == undefined ||
+                    $scope.op2 == '' || $scope.op2 == undefined) {
+                    alert('Both operands are required!')
+                } else {
+                    var o1 = $scope.op1;
+                    var o2 = $scope.op2;
+                    $scope.hidden = 'visible';
+                    $scope.operation = 'dividing';
+                    $scope.ope1 = $scope.op1;
+                    $scope.ope2 = $scope.op2;
+                    return o1 / o2;
+                }
             }
-            $scope.operation = 'divide';
-            $scope.hidden = 'visible';
-            $scope.ope1 = $scope.op1;
-            $scope.ope2 = $scope.op2;
             $scope.op1 = '';
             $scope.op2 = '';
+
         };
 
     });
