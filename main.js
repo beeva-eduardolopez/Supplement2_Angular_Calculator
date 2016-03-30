@@ -8,8 +8,11 @@ angular.module('angularCalculatorApp', [])
             }
             $scope.operation = 'add';
             $scope.hidden = 'visible';
-            // $scope.op1 = '';
-            // $scope.op2 = '';
+            $scope.ope1 = $scope.op1;
+            $scope.ope2 = $scope.op2;
+            $scope.op1 = '';
+            $scope.op2 = '';
+
         };
         $scope.onClickSubtract = function() {
             $scope.result = calculateSub();
@@ -18,8 +21,10 @@ angular.module('angularCalculatorApp', [])
             }
             $scope.operation = 'subtract';
             $scope.hidden = 'visible';
-            // $scope.op1 = '';
-            // $scope.op2 = '';
+            $scope.ope1 = $scope.op1;
+            $scope.ope2 = $scope.op2;
+            $scope.op1 = '';
+            $scope.op2 = '';
         };
         $scope.onClickMultiply = function() {
             $scope.result = calculateMul();
@@ -28,8 +33,10 @@ angular.module('angularCalculatorApp', [])
             }
             $scope.operation = 'multiply';
             $scope.hidden = 'visible';
-            // $scope.op1 = '';
-            // $scope.op2 = '';
+            $scope.ope1 = $scope.op1;
+            $scope.ope2 = $scope.op2;
+            $scope.op1 = '';
+            $scope.op2 = '';
         };
         $scope.onClickDivide = function() {
             $scope.result = calculateDiv();
@@ -38,8 +45,10 @@ angular.module('angularCalculatorApp', [])
             }
             $scope.operation = 'divide';
             $scope.hidden = 'visible';
-            // $scope.op1 = '';
-            // $scope.op2 = '';
+            $scope.ope1 = $scope.op1;
+            $scope.ope2 = $scope.op2;
+            $scope.op1 = '';
+            $scope.op2 = '';
         };
 
     });
