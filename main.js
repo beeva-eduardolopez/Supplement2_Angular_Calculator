@@ -66,8 +66,10 @@ angular.module('angularCalculatorApp', [])
             function calculateDiv() {
                 if ($scope.op1 == '' || $scope.op1 == undefined ||
                     $scope.op2 == '' || $scope.op2 == undefined) {
-                    alert('Both operands are required!')
-                } else {
+                    alert('Both operands are required!');
+                } else if($scope.op2== 0){
+                     alert('You cannot divide by 0!');
+                } else{
                     var o1 = $scope.op1;
                     var o2 = $scope.op2;
                     $scope.hidden = 'visible';
